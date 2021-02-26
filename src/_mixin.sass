@@ -1,0 +1,11 @@
+@mixin flex($direction, $justify, $wrap:nowrap)
+    display: flex
+    flex-direction: $direction
+    justify-content: $justify
+    flex-wrap: $wrap
+@mixin border($radius, $style:none, $width:1px, $color:black)
+    border: $style $width $color
+    border-radius: $radius
+@mixin size($width, $height)
+    width: $width
+    height: $height
