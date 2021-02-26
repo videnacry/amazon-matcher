@@ -2,9 +2,10 @@ import './App.sass';
 
 function App() {
   return (
-    <div className="App">
+  <div className='page'>
+    <div className="main-container">
       <div>
-        <header>
+        <header className='header-c'>
           <button>
             <img src='' alt='4 dots'/>
           </button>
@@ -13,7 +14,7 @@ function App() {
       </div>
       <section>
         <nav>
-          <ul>
+          <ul  className='search-nav'>
             <li>
               <input type='text' placeholder='search'/>
             </li>
@@ -30,9 +31,11 @@ function App() {
         <div>
           <ul>
             <li>
-              <article>
-                <button></button>
-                <button></button>
+              <article className='article-c'>
+                <div className='flex-row content-space-between'>
+                  <button></button>
+                  <button></button>
+                </div>
                 <img src='' alt=''/>
                 <h3>Popular Shoe Trends</h3>
                 <p>€236.00</p>
@@ -42,6 +45,7 @@ function App() {
         </div>
       </section>
     </div>
+  </div>
   );
 }
 
