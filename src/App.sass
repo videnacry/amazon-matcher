@@ -31,9 +31,18 @@
         outline: none
     &:hover
         filter: blur(0)
-.row-justify-between
+.app-header
+    @include size(100%, 8vw)
+    padding-bottom: 2vw
     @include flex(row, space-between)
 .column-justify-center
     @include flex(column, center)
 .index-brand
     font-size: 2.5vw
+.matchs-section
+    width: 100%
+    @include flex(row, center, wrap)
+.search-nav
+    @include size(98%, 36vh)
+    @include border(4vw, solid, 0.2vw, #fdbb0c)
+    background-image: repeating-linear-gradient(-45deg,#fdbb0c, #fdc359, #fdbb0c 30%)
