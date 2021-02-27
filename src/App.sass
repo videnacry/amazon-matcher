@@ -21,11 +21,7 @@
     @include maxSize(50px, 50px) 
     @include border(50%, solid, 0.2vw, white)
     @include bgImg(none, 50%)
-    background-color: transparent
-    background-size: 50%
-    background-repeat: no-repeat
-    background-position: center
-    box-shadow: inset 0 0 0.8vw white
+    box-shadow: inset 0.2vw 0.2vw 0.8vw white, inset -0.2vw -0.2vw 0.8vw white
     filter: blur(0.7px)
     &:focus
         outline: none
@@ -52,9 +48,19 @@
     @include flex(row, center)
     list-style: none
 .matchs-list
-    @include size(100%, 81%)
+    @include size(100%, 83%)
     padding: 0 10%
+    overflow-y: scroll
     position: absolute
-    top: 12%
-    @include flex(row, space-between)
+    bottom: 0
     list-style: none
+.match
+    @include size(100%, 28vw)
+    @include flex(row, space-between, wrap)
+.matching-item
+    @include size(30%, 25vw)
+    padding: 2vw
+    @include border(3vw, solid, 0.2vw, #feebc1)
+    @include flex(column, space-between, wrap)
+    background-color: #fec9b1
+    box-shadow: inset 0 3vw 7vw white, inset 0 -3vw 7vw white
