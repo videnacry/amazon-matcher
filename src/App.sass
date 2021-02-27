@@ -14,5 +14,20 @@
 .first-container
     @include size(100%, 100%)
     padding: 2% 2% 0 2%
-    @include border(3vw, solid, 2px, #fff5e4)
+    @include border(3vw, solid, 0.5vw, #fff5e4)
     background-color: #feebc1
+.nav-button
+    @include size(10vw, 10vw)
+    @include maxSize(50px, 50px) 
+    @include border(50%, solid, 0.2vw, white)
+    @include bgImg(none, 50%)
+    background-color: transparent
+    background-size: 50%
+    background-repeat: no-repeat
+    background-position: center
+    box-shadow: inset 0 0 0.8vw white
+    filter: blur(0.7px)
+    &:focus
+        outline: none
+    &:hover
+        filter: blur(0)
