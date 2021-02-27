@@ -5,8 +5,8 @@
     flex-wrap: $wrap
 
 @mixin border($radius, $style:none, $width:1px, $color:black)
-    border: $style $width $color
     border-radius: $radius
+    border: $style $width $color
 
 @mixin size($width, $height)
     width: $width
@@ -15,6 +15,10 @@
 @mixin maxSize($width, $height)
     max-width: $width
     max-height: $height
+
+@mixin minSize($width, $height)
+    min-width: $width
+    min-height: $height
 
 @mixin bgImg($url, $size:contain, $repeat:no-repeat, $position:center, $color:transparent)
     @if $url == none
