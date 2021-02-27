@@ -3,12 +3,24 @@
     flex-direction: $direction
     justify-content: $justify
     flex-wrap: $wrap
+
 @mixin border($radius, $style:none, $width:1px, $color:black)
     border: $style $width $color
     border-radius: $radius
+
 @mixin size($width, $height)
     width: $width
     height: $height
+
 @mixin maxSize($width, $height)
     max-width: $width
     max-height: $height
+
+@mixin bgImg($url, $size:contain, $repeat:no-repeat, $position:center, $color:transparent)
+    @if $url == none
+    @else
+        background-image: url($url)
+    background-color: $color
+    background-size: $size
+    background-repeat: $repeat
+    background-position: $position
