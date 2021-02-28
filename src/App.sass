@@ -45,8 +45,16 @@
     background-image: repeating-linear-gradient(-45deg,#fdbb0c, #fdc359, #fdbb0c 30%)
 .search-filter
     padding: 2vw 3vw
-    @include flex(row, center)
+    @include flex(row, space-evenly)
     list-style: none
+    input[type=text], select
+        padding: 0.2vw 2vw
+        @include border(1vw, solid, 0.2vw, #ffffff80)
+        background-color: #ffffff80
+        box-shadow: inset 0.1vw -0.1vw 0.8vw #ffffff80, inset -0.1vw -0.1vw 0.8vw #ffffff80
+        &:focus, &:hover
+            outline: none
+            transform: scale(1.2)
 .matchs-list
     @include size(100%, 83%)
     padding: 0 10%
@@ -71,8 +79,12 @@
             box-shadow: inset 0.2vw 0.2vw 0.6vw #ff974c, inset -0.2vw -0.2vw 0.6vw #ff974c
             font-weight: 500
             font-size: 1.5vw
+            filter: brightness(0.95)
             &:focus
                 outline: none
+                filter: brightness(1.05)
+            &:hover
+                filter: brightness(1.05)
 .matching-item
     @include size(30%, 25vw)
     padding: 2vw
