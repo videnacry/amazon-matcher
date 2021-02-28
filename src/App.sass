@@ -55,8 +55,24 @@
     bottom: 0
     list-style: none
 .match
-    @include size(100%, 28vw)
+    @include size(100%, 30vw)
+    padding: 2vw
+    @include border(3vw, dashed, 0.3vw, #ff974c)
+    margin-bottom: 3vw
     @include flex(row, space-between, wrap)
+    .match-footer
+        @include size(100%, 10%)
+        padding: 1vw
+        @include flex(row, center)
+        button
+            @include size(fit-content, fit-content)
+            padding: 0.5vw 3vw
+            @include border(3vw, solid, 0.3vw, #ff974c)
+            box-shadow: inset 0.2vw 0.2vw 0.6vw #ff974c, inset -0.2vw -0.2vw 0.6vw #ff974c
+            font-weight: 500
+            font-size: 1.5vw
+            &:focus
+                outline: none
 .matching-item
     @include size(30%, 25vw)
     padding: 2vw
@@ -64,3 +80,12 @@
     @include flex(column, space-between, wrap)
     background-color: #fec9b1
     box-shadow: inset 0 3vw 7vw white, inset 0 -3vw 7vw white
+    .item-title
+        font-weight: 600
+    .item-title, .item-price
+        font-size: 1.6vw
+        color: #6a5d89
+        text-shadow: 0.2vw 0 0.1vw #a395be, -0.2vw 0 #d5c6dd
+    .item-price
+        font-size: 1.3vw
+        text-shadow: 0.1vw 0 0.1vw #a395be, -0.1vw 0 #d5c6dd
