@@ -1,24 +1,31 @@
+@mixin maxSize($width, $height)
+    max-width: $width
+    max-height: $height
+
+@mixin size($width, $height)
+    width: $width
+    height: $height
+
+@mixin minSize($width, $height)
+    min-width: $width
+    min-height: $height
+
+@mixin border($radius, $style:none, $width:1px, $color:black)
+    border-radius: $radius
+    border: $style $width $color
+
 @mixin flex($direction, $justify, $wrap:nowrap)
     display: flex
     flex-direction: $direction
     justify-content: $justify
     flex-wrap: $wrap
 
-@mixin border($radius, $style:none, $width:1px, $color:black)
-    border-radius: $radius
-    border: $style $width $color
-
-@mixin size($width, $height)
-    width: $width
-    height: $height
-
-@mixin maxSize($width, $height)
-    max-width: $width
-    max-height: $height
-
-@mixin minSize($width, $height)
-    min-width: $width
-    min-height: $height
+@mixin position($position:relative, $top:unset, $right:unset, $bottom:unset, $left:unset)
+    position: $position
+    top: $top
+    right: $right
+    bottom: $bottom
+    left: $left
 
 @mixin bgImg($url, $size:contain, $repeat:no-repeat, $position:center, $color:transparent)
     @if $url == none
