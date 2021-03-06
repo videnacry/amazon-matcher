@@ -1,3 +1,5 @@
+import {ScoreCircle} from './scoreCircle'
+
 export const MatchingImg = ({imgSrc, title, price}) => {
     return(
     <article className='matching-item'>
@@ -9,6 +11,7 @@ export const MatchingImg = ({imgSrc, title, price}) => {
             <div>
             <h3 className='item-title'>{title}</h3>
             <p className='item-price'>{price}</p>
+            <ScoreCircle score='9.3'/>
         </div>
     </article>
     )
