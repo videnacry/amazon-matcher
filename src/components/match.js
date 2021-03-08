@@ -1,4 +1,5 @@
 import {MatchingImg} from './matchingImg'
+import {MatchingFields} from './matchingFields'
 import {MatchingDetails} from './matchingDetails'
 
 import birdF from '../Bird_F.png'
@@ -30,9 +31,18 @@ export const Match = ({imgSrc, title, price}) => {
 
   return(
   <li  className='match'>
-    {items.map(item => <MatchingImg imgSrc={birdF} title='BirdF' price='236' />)}
-    {items.map(item => <MatchingDetails fields={fields} data={data} />)}
-    {items.map(item => <MatchingDetails fields={fieldsPhoto} data={dataPhoto} />)}
+    <section>
+      <MatchingFields fields={[]} title='Items'/>
+      {items.map(item => <MatchingImg imgSrc={birdF} title='BirdF' price='236' />)}
+    </section>
+    <section>
+      <MatchingFields fields={fields} title='Screen'/>
+      {items.map(item => <MatchingDetails fields={fields} data={data} />)}
+    </section>
+    <section>
+      <MatchingFields fields={fieldsPhoto} title='Photography'/>
+      {items.map(item => <MatchingDetails fields={fieldsPhoto} data={dataPhoto} />)}
+    </section>
     <div className='match-footer'>
       <button>More details</button>
     </div>
