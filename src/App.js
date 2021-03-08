@@ -1,5 +1,5 @@
 import './App.sass';
-import {ItemImage} from './components/match'
+import {Match} from './components/match'
 
 import img from './img.jpg'
 import burgerButtonImg from './burgerButton.svg'
@@ -37,7 +37,7 @@ function App() {
             </ul>
           </nav>
           <ul className='matchs-list'>
-            <ItemImage/>
+            <Match/>
           </ul>
         </section>
       </div>
