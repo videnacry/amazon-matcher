@@ -119,3 +119,24 @@
     .item-price
         font-size: 1.3vw
         text-shadow: 0.1vw 0 0.1vw #a395be, -0.1vw 0 #d5c6dd
+    @at-root section.matching-item
+        height: fit-content
+        margin-top: 1vw
+        font-size: 1.3vw
+        h3
+            margin: 0 0 1vw 0
+            color: white
+            text-shadow: 0.1vw 0.1vw 0.2vw #2e2e2e, -0.1vw -0.1vw 0.2vw #2e2e2e, -0.1vw 0.1vw 0.2vw #2e2e2e, 0.1vw -0.1vw 0.2vw #2e2e2e, 0.1vw 0.1vw #2e2e2e, -0.1vw -0.1vw #2e2e2e, -0.1vw 0.1vw #2e2e2e, 0.1vw -0.1vw #2e2e2e;
+        .score-circle-c
+            >div
+                background-color: #feddce
+        >ul
+            margin-top: 1vw
+            @include flex(column, space-between, wrap)
+            list-style: none
+            >li
+                padding: 0.5vw
+                margin: 0.5vw 0
+                @include border(3vw, solid, 0.1vw, #00000026)
+                text-align: center
+                box-shadow: inset 0.2vw 0.2vw 0.8vw white, inset -0.2vw -0.2vw 0.8vw white
