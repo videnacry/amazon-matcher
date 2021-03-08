@@ -57,13 +57,13 @@
             transform: scale(1.2)
 .matchs-list
     @include size(100%, 83%)
-    padding: 0 10%
+    padding: 0 5%
     overflow-y: scroll
     position: absolute
     bottom: 0
     list-style: none
 .match
-    @include size(100%, 30vw)
+    @include size(100%, fit-content)
     padding: 2vw
     @include border(3vw, dashed, 0.3vw, #ff974c)
     margin-bottom: 3vw
@@ -86,6 +86,9 @@
                 @include position(relative, 50%, unset, unset, 50%)
                 transform: translate(-50%, -50%);
                 text-align: center;
+    >section
+        width: 100%
+        @include flex(row, space-between, wrap)
     .match-footer
         @include size(100%, 10%)
         padding: 1vw
@@ -104,7 +107,7 @@
             &:hover
                 filter: brightness(1.05)
 .matching-item
-    @include size(30%, 25vw)
+    @include size(25%, 25vw)
     padding: 2vw
     @include border(3vw, solid, 0.2vw, #feebc1)
     @include flex(column, space-between, wrap)
@@ -119,7 +122,7 @@
     .item-price
         font-size: 1.3vw
         text-shadow: 0.1vw 0 0.1vw #a395be, -0.1vw 0 #d5c6dd
-    @at-root section.matching-item
+    @at-root section.matching-item, .matching-fields
         height: fit-content
         margin-top: 1vw
         font-size: 1.3vw
@@ -140,3 +143,16 @@
                 @include border(3vw, solid, 0.1vw, #00000026)
                 text-align: center
                 box-shadow: inset 0.2vw 0.2vw 0.8vw white, inset -0.2vw -0.2vw 0.8vw white
+.matching-fields
+    width: 20%
+    padding: 2vw 0 2vw 0
+    @include border(3vw, solid, 0.2vw, transparent)
+    >.score-circle-c
+        background-color: transparent
+        box-shadow: none
+    >ul
+        >li
+            padding-left: 2vw
+            >h4
+                font-size: 1.3vw
+                text-align: start
